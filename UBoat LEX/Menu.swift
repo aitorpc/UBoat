@@ -10,18 +10,12 @@ import SpriteKit
 
 class Menu: SKScene {
 
-    
     var fondo = SKSpriteNode()
     
-    
-
     override func didMoveToView(view: SKView) {
-        
         imagenPeriscopio()
         llamada()
-        
     }
-    
     
     func imagenPeriscopio() {
         
@@ -29,22 +23,9 @@ class Menu: SKScene {
         fondo.position = CGPoint(x: size.width / 2 , y: size.height / 2)
         fondo.size = self.size
         addChild(fondo)
-        
-        
-        
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
     func llamada() {
-     
         let label = SKLabelNode(fontNamed: "Avenir")
         
         label.text = "Jugar"
@@ -55,15 +36,7 @@ class Menu: SKScene {
         label.position = CGPoint(x: size.width / 2 - 50, y: size.height / 2)
         label.name = "Cambiar"
         addChild(label)
-        
-
     }
-    
-    
-    
-    
-    
-    
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         
@@ -83,23 +56,6 @@ class Menu: SKScene {
             aparecerEscena.scaleMode = SKSceneScaleMode.AspectFill
             
             self.scene?.view?.presentScene(aparecerEscena, transition: transicion)
-            
         }
-        
-        
-        
-        
-        
     }
-    
-    
-    
-    
-    
-    
-    
-    
-
-
 }
-

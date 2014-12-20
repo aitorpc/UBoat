@@ -12,15 +12,10 @@ import SpriteKit
 
 class ViewController: UIViewController {
 
-    
-    
     var escena: Menu!
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         let vista = view as SKView
         
@@ -28,26 +23,10 @@ class ViewController: UIViewController {
         escena.scaleMode = .AspectFill
         
         vista.presentScene(escena)
-        
-        
-        
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
-

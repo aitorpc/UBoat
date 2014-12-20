@@ -36,7 +36,7 @@ class Juego: SKScene {
         heroe()
         prismaticos()
         crearEscenario()
-        //enemy()
+        enemy()
     }
     
     func heroe() {
@@ -131,7 +131,7 @@ class Juego: SKScene {
         
         addChild(enemigo)
         
-        moverEnemigo = SKAction.moveToX(size.width - enemigo.size.width * 2, duration: 2.0)
+        moverEnemigo = SKAction.moveToX(size.width - enemigo.size.width * 3, duration: 2.0)
         
         //let mover = SKAction.moveToX(  -enemigo.size.width/2, duration: 2.0)
         
@@ -141,13 +141,19 @@ class Juego: SKScene {
     }
     
     func sacarEnemigo() {
+        /*
         for var i = 0; i < 5; ++i {
             enemy()
             enemigo.runAction(moverEnemigo)
         }
-        if enemigo.position.x <= size.width - enemigo.size.width/2 {
+        */
+        
+        enemigo.runAction(moverEnemigo)
+        /*
+        if enemigo.position.x <= size.width - enemigo.size.width * 2 {
             enemigo.removeFromParent()
         }
+        */
     }
     
     override func update(currentTime: NSTimeInterval) {
